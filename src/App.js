@@ -1,4 +1,5 @@
-import HomePage from './homepage.component';
+import HomePage from './pages/homepage/homepage.component';
+import Directory from './components/directory/directory.comonent';
 
 import './App.css';
 
