@@ -9,31 +9,36 @@ class Directory extends React.Component{
         this.state = {
             sections:  [
                 {
-                    title: 'aircon',
-                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/aircon/nokia_air_conditioner_image_flipkart_1608556296721_UAohagnQYa.webp',
-                    id: 1
+                    title: 'wallpapers',
+                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/wallpaper/ben-white-qYanN54gIrI-unsplash_VgJmOpKVi.jpg?updatedAt=1627303272129',
+                    id: 1,
+                    linkUrl: 'wallpaper',
                 },
                 {
-                    title: 'refrigerators',
-                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/refrigerators/best-fridges-2019-1569421093_Y0ea8cxXQ.png',
-                    id: 2
+                    title: 'books',
+                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/books/books-cover_tkUEL3P6C.jpg?updatedAt=1627303420950',
+                    id: 2,
+                    linkUrl: 'books',
                 },
                 {
-                    title: 'tv',
-                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/tv/17-19-32-Inch-TV-Set-3D-Smart-LCD-Screen-Digital-Color-Plasma-HD-LCD-LED-TV_ffwD668MOS.jpg',
-                    id: 3
+                    title: 'sermons',
+                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/sermons/sermon-cover_KSjuzI9j-.jpg?updatedAt=1627303385920',
+                    id: 3,
+                    linkUrl: 'sermons',
                 },
                 {
-                    title: 'guitar',
-                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/guitar/images__3__TBXN1LJ6_.jpeg',
+                    title: 'songs',
+                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/songs/songs-cover_qZK9oyDbZG.jpg?updatedAt=1627303780824',
+                    id: 4,
+                    linkUrl: 'songs',
                     size: 'large',
-                    id: 4
                 },
                 {
-                    title: 'piano',
-                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/piano/15612050_800_Jj3-xnEfyp.jpg',
+                    title: 'bible',
+                    imageUrl: 'https://ik.imagekit.io/cyctpb3gf8c/bible/bible-cover_hdyA0VKWu.jpg?updatedAt=1627303457940',
+                    id: 5,
+                    linkUrl: 'bible',
                     size: 'large',
-                    id: 5
                 },
             ]
         }   
@@ -41,7 +46,9 @@ class Directory extends React.Component{
     render(){
         return (
             <div className='directory-menu'>
-                {this.state.sections.map(({title, imageUrl, id, size}) => (<MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/> ))}
+                {this.state.sections.map(({id, ...otherSectionProps}) => (
+                <MenuItem key={id} {...otherSectionProps} /> 
+                ))}
             </div>
         )
     }
