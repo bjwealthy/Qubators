@@ -8,6 +8,12 @@ a{
   color: black;
 }
 
+*{
+  box-sizing: border-box;
+}
+
+/**
+
 .App {
   text-align: center;
 }
@@ -46,3 +52,4 @@ a{
     transform: rotate(360deg);
   }
 }
+*/
